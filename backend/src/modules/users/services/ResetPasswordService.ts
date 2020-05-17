@@ -33,7 +33,9 @@ class ResetPasswordService {
 
     const tokenCreatedAt = userToken.created_at;
 
-    if (differenceInHours(tokenCreatedAt, new Date(Date.now())) > 2) {
+    const actualDate = new Date(Date.now());
+
+    if (differenceInHours(tokenCreatedAt, actualDate) > 2) {
       throw new AppError('This token is expireted');
     }
 

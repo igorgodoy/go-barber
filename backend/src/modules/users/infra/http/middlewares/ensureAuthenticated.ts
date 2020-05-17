@@ -5,7 +5,7 @@ import authConfig from '@config/auth';
 
 import AppError from '@shared/errors/AppError';
 
-interface TokenPayloadType {
+interface ITokenPayloadType {
   expiresIn: string;
   iat: Timestamp;
   subject: string;
@@ -27,7 +27,7 @@ export default function ensureAuthenticated(
   try {
     const decoded = verify(token, authConfig.jwt.secret);
 
-    const { subject: userId } = decoded as TokenPayloadType;
+    const { subject: userId } = decoded as ITokenPayloadType;
 
     req.user = {
       id: userId,
