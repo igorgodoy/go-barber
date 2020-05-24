@@ -14,10 +14,10 @@ Para inciar o projeto será necessário:
 
 ### Pré-requisitos
 
-Subindo a base de dados:
+Subindo as bases de dados:
 
 ```sh
-docker run --name db-name -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
+docker run --name postgre -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
 ```
 
 Você poderá criar uma base de dados dentro de seu container.
@@ -28,6 +28,14 @@ Obs: Vocé pode escolher qualquer nome para a base de dados, devendo somente alt
 
 ```
 yarn typeorm migration:run
+```
+
+```sh
+docker run --name redis -p 6379:6379 -d -t redis:alpine
+```
+
+```sh
+docker run --name mongodb -p 27017:27017 -d -t mongo
 ```
 
 Instalando as dependências.
