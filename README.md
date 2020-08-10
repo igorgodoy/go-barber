@@ -32,7 +32,7 @@ cd backend && docker-compose up -d
 yarn typeorm migration:run
 ```
 
-Com os passos acima, você poderá acessar as rotas do API do projeto através de: http://localhost:3333.
+Com os passos acima, você poderá acessar as rotas do API do projeto através de: http://localhost:3333/ping.
 
 Em seguida, deve-se instalar as dependências da aplicação web:
 
