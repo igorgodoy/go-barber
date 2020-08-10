@@ -18,13 +18,13 @@ Para inciar o projeto será necessário:
 
 Dentro do diretório do projeto, execute os comando do passo a passo abaixo.
 
+Obs: Lembre-se de editar o arquivo `ormconfig.json` dentro da pasta `backend` inserindo seu IP nos campos `host` de ambos os bancos (Postgres e Mongo).
+
 Subindo as bases de dados:
 
 ```sh
 cd backend && docker-compose up -d
 ```
-
-Obs: Lembre-se de editar o arquivo `ormconfig.json` dentro da pasta `backend` inserindo seu IP nos campos `host` de ambos os bancos (Postgres e Mongo).
 
 É necessário rodar as migrations para que o TypeORM crie as tabelas necessárias no banco de dados, através do comando:
 
