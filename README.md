@@ -14,47 +14,39 @@ Para inciar o projeto será necessário:
 
 ### Pré-requisitos
 
+Dentro do diretório do projeto, execute os comando do passo a passo abaixo.
+
 Subindo as bases de dados:
 
 ```sh
-docker run --name postgre -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
+cd backend && docker-compose up -d
 ```
 
-Você poderá criar uma base de dados dentro de seu container.
-
-Obs: Vocé pode escolher qualquer nome para a base de dados, devendo somente alterar no arquivo `ormconfig.json` dentro da pasta `backend`, assim como valores referente ao ambiente (usuario, host, etc).
+Obs: Lembre-se de editar o arquivo `ormconfig.json` dentro da pasta `backend` inserindo seu IP nos campos `host` de ambos os bancos (Postgres e Mongo).
 
 É necessário rodar as migrations para que o TypeORM crie as tabelas necessárias no banco de dados, através do comando:
 
-```
+```sh
 yarn typeorm migration:run
 ```
 
-```sh
-docker run --name redis -p 6379:6379 -d -t redis:alpine
-```
+Com os passos acima, você poderá acessar as rotas do API do projeto através de: http://localhost:3333.
+
+Em seguida, deve-se instalar as dependências da aplicação web:
 
 ```sh
-docker run --name mongodb -p 27017:27017 -d -t mongo
+cd ../frontend && yarn
 ```
 
-Instalando as dependências.
+Para finalizar os pré-requisitos, instale as dependências da aplicação mobile:
 
-```
-yarn
-```
-
-Em todos os diretórios, basta utilizar o comando acima (com o yarn previamente instalado) para instalar todas as dependências necessárias para cada projeto.
-
-Para iniciar o back-end do projeto:
-
-```
-yarn dev:server
+```sh
+cd ../mobile && yarn
 ```
 
 Para iniciar o projeto Web:
 
-```
+```sh
 yarn start
 ```
 
@@ -62,7 +54,7 @@ Para iniciar o projeto Mobile:
 
 - Necessário dispositivo físico ou emulador configurado
 
-```
+```sh
 yarn start
 yarn android || yarn ios
 ```
