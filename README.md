@@ -4,6 +4,8 @@ Sistema básico para agendamento de serviços em barbearias.
 
 ## Iniciando a aplicação
 
+### Pré-requisitos
+
 Para inciar o projeto será necessário:
 
 - Docker
@@ -12,7 +14,7 @@ Para inciar o projeto será necessário:
 - React Native
 - Yarn
 
-### Pré-requisitos
+### Passos
 
 Dentro do diretório do projeto, execute os comando do passo a passo abaixo.
 
