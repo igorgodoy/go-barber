@@ -18,7 +18,10 @@ Para inciar o projeto será necessário:
 
 Dentro do diretório do projeto, execute os comando do passo a passo abaixo.
 
-Obs: Lembre-se de editar o arquivo `ormconfig.json` dentro da pasta `backend` inserindo seu IP nos campos `host` de ambos os bancos (Postgres e Mongo).
+Antes de seguir os comandos abaixo, lembre-se de:
+
+- Editar o arquivo `ormconfig.json` dentro da pasta `backend` inserindo seu IP nos campos `host` de ambos os bancos (Postgres e Mongo).
+- Editar o arquivo `docker-compose.yml`, e inserir seu caminho de preferência para os volumes dos serviços.
 
 Subindo as bases de dados:
 
